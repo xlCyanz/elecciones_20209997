@@ -116,6 +116,9 @@ interface CardProps extends TouchableOpacityProps {
   FooterComponent?: ReactElement
 }
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 /**
  * Cards are useful for displaying related information in a contained way.
  * If a ListItem displays content horizontally, a Card can be used to display content vertically.

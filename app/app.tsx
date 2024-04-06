@@ -54,6 +54,9 @@ const config = {
   },
 }
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 interface AppProps {
   hideSplashScreen: () => Promise<boolean>
 }

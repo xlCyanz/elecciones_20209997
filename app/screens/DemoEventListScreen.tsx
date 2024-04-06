@@ -39,6 +39,9 @@ import { colors, spacing } from "../theme"
 import { delay } from "../utils/delay"
 import { openLinkInBrowser } from "../utils/openLinkInBrowser"
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 const ICON_SIZE = 14;
 
 const rnrImage1 = require("../../assets/images/demo/rnr-image-1.png")

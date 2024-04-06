@@ -10,6 +10,9 @@ import { Button, Card, EmptyState, ListView, Screen, Text } from "app/components
 
 import { colors, spacing } from "../theme";
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 interface EventListScreenProps extends EventTabScreenProps<"EventListScreen"> { }
 
 export const EventListScreen: React.FC<EventListScreenProps> = observer(function EventListScreen({

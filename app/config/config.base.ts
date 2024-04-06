@@ -4,6 +4,9 @@ export interface ConfigBaseProps {
   exitRoutes: string[]
 }
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 export type PersistNavigationConfig = ConfigBaseProps["persistNavigation"]
 
 const BaseConfig: ConfigBaseProps = {

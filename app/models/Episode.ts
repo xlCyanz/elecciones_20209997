@@ -11,6 +11,9 @@ interface Enclosure {
   rating: { scheme: string; value: string }
 }
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 /**
  * This represents an episode of React Native Radio.
  */

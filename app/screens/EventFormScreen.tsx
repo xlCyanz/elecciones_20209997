@@ -16,6 +16,9 @@ import { EventTabScreenProps } from "app/navigators";
 import { Button, Screen, Text, TextField, TextFieldProps } from "app/components";
 import { formatDateCustom, parseDate } from "app/utils/formatDate";
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 interface EventFormScreenProps extends EventTabScreenProps<"EventFormScreen"> { }
 
 interface IControllerTextInputProps extends TextFieldProps, UseControllerProps<Record<string, string>> {

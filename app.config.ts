@@ -6,6 +6,9 @@ import { ExpoConfig, ConfigContext } from "@expo/config"
  */
 require("ts-node/register")
 
+// Johan Ezequiel Sierra Linares
+// 2020-9997
+
 /**
  * @param config ExpoConfig coming from the static config app.json if it exists
  * 
