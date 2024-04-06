@@ -17,9 +17,10 @@ import { useColorScheme } from "react-native"
 import * as Screens from "app/screens"
 import Config from "../config"
 import { useStores } from "../models"
-import { DemoNavigator, DemoTabParamList } from "./DemoNavigator"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 import { colors } from "app/theme"
+import { EventNavigator, EventTabParamList } from "./EventNavigator"
+import { EventDetailsScreen } from "app/screens/EventDetails"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -37,7 +38,8 @@ import { colors } from "app/theme"
 export type AppStackParamList = {
   Welcome: undefined
   Login: undefined
-  Demo: NavigatorScreenParams<DemoTabParamList>
+  Event: NavigatorScreenParams<EventTabParamList>;
+  EventDetails: { id: string };
   // 🔥 Your screens go here
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
@@ -63,14 +65,15 @@ const AppStack = observer(function AppStack() {
 
   return (
     <Stack.Navigator
-      screenOptions={{ headerShown: false, navigationBarColor: colors.background }}
-      initialRouteName={isAuthenticated ? "Welcome" : "Login"}
+      initialRouteName="Event"
+      screenOptions={{ navigationBarColor: colors.background }}
+    // initialRouteName={isAuthenticated ? "Event" : "Login"}
     >
+      <Stack.Screen name="Event" options={{ headerShown: false }} component={EventNavigator} />
+      <Stack.Screen name="EventDetails" component={EventDetailsScreen} />
       {isAuthenticated ? (
         <>
-          <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
-
-          <Stack.Screen name="Demo" component={DemoNavigator} />
+          {/* <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} /> */}
         </>
       ) : (
         <>
@@ -85,7 +88,7 @@ const AppStack = observer(function AppStack() {
 })
 
 export interface NavigationProps
-  extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
+  extends Partial<React.ComponentProps<typeof NavigationContainer>> { }
 
 export const AppNavigator = observer(function AppNavigator(props: NavigationProps) {
   const colorScheme = useColorScheme()
